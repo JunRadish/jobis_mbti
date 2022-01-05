@@ -6,6 +6,9 @@ files:
     overwrite: true
 hooks:
   BeforeInstall:
+    - location: scripts/backup_source.sh
+      timeout: 30
+      runas: root
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
